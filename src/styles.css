@@ -7,6 +7,10 @@ footer {
     width: 100%;
 }
 
+body {
+    padding-bottom: 50px;
+}
+
 .main-container {
     margin-top: 20px;
 }
