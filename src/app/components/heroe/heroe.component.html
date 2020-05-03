@@ -1,14 +1,18 @@
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
+<div class="jumbotron jumbotron-fluid ">
+    <div class="container border-top border-bottom">
         <div class="row">
             <div class="col animated fadeIn fast">
                 <img [src]="heroe.img" [alt]="heroe.nombre">
             </div>
-            <div class="col animated fadeIn">
-                <h1 class="display-4">{{ heroe.nombre }}</h1>
-                <p class="lead">{{ heroe.bio }}</p>
-                <p>Casa: {{ heroe.aparicion }}</p>
-                <p>Casa: {{ heroe.casa }}</p>
+            <div class="col animated fadeIn border">
+                <div class="col text-center">
+                    <h1 class="display-4">{{ heroe.nombre | uppercase }} <small>({{ heroe.aparicion | date:'y' }})</small> </h1>
+                </div>
+                <hr>
+                <div class="col">
+                    <p class="lead">{{ heroe.bio }}</p>
+                    <p>Casa: {{ heroe.casa }}</p>
+                </div>
             </div>
         </div>
     </div>
