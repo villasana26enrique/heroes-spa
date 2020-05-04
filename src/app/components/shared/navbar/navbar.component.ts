@@ -11,4 +11,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  buscarHeroe(texto: string): void {
+    console.log(texto);
+  }
 }
