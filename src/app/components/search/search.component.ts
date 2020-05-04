@@ -13,6 +13,7 @@ export class SearchComponent implements OnInit {
   private _activatedRoute;
   private _heroesService;
   public heroes: any[] = [];
+  public texto: string;
 
   constructor(activatedRoute: ActivatedRoute,
               heroesService: HeroesService) {
@@ -22,7 +23,8 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this._activatedRoute.params.subscribe( params => {
-      this.heroes = this._heroesService.buscarHeroes(params.texto);
+      this.texto = params.texto;
+      this.heroes = this._heroesService.buscarHeroes(this.texto);
     });
   }
 
